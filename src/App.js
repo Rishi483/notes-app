@@ -37,12 +37,20 @@ useEffect(()=>{
   if(savedNotes){
     setNotes(savedNotes);
   }
+  const savedDarkMode=JSON.parse(localStorage.getItem('react-notes-app-dark-mode'));
+  if(savedDarkMode){
+    setdarkMode(savedDarkMode);
+  }
 },[])
 
 useEffect(()=>{
   localStorage.setItem('react-notes-app-data',JSON.stringify(Notes))
 },[Notes])
 
+useEffect(()=>{
+  localStorage.setItem('react-notes-app-dark-mode',JSON.stringify(darkMode));
+},[darkMode])
+  
   const addNote=(newText)=>{
     const date=new Date();
     const newNote={
