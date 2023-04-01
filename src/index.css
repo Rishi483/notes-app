@@ -39,8 +39,9 @@ code {
 }
 .dark-mode{
   background-color: #121212;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
 }
 .dark-mode h1{
   color: #fff;
